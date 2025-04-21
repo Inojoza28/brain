@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackeador de Mentes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container-app px-5 py-8 md:py-16">
+        <header class="text-center mb-12 fade-in">
+            <div class="inline-block mb-2 text-accent">
+                <span class="mono text-xs tracking-widest uppercase px-3 py-1 rounded-full" style="border: 1px solid var(--accent); color: var(--accent);">Beta</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-3 header-title">Hackeador de Mentes</h1>
+            <p class="text-sm md:text-base" style="color: var(--text-secondary);">O código invisível por trás de grandes projetos</p>
+        </header>
+        
+        <main>
+            <section id="initSection" class="fade-in stagger-1 mb-10">
+                <div class="card p-5">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full mr-3 pulse" style="background-color: var(--accent);"></div>
+                        <p id="initText" class="mono text-sm" style="color: var(--accent);"></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="questionSection" class="fade-in stagger-2 mb-10">
+                <div class="card p-7 shine-effect">
+                    <h2 class="text-xl md:text-2xl font-medium mb-7 text-center">O que te impede de começar um projeto?</h2>
+                    
+                    <div class="mb-4">
+                        <div class="input-container">
+                            <input 
+                                type="text" 
+                                id="userInput" 
+                                class="input-field focus-ring" 
+                                placeholder="Digite sua resposta..."
+                                autocomplete="off"
+                                autofocus
+                            >
+                            <button id="sendButton" class="btn-send">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-center mt-3" style="color: var(--text-secondary);">
+                        <i class="fas fa-lock text-xs mr-1"></i> Suas respostas são processadas apenas localmente
+                    </p>
+                </div>
+            </section>
+            
+            <section id="responseSection" class="hidden fade-in">
+                <div class="card response-card p-7 mb-8">
+                    <div class="flex items-center mb-5">
+                        <div class="w-2 h-8 mr-3 rounded" style="background-color: var(--accent);"></div>
+                        <h3 class="text-sm uppercase tracking-wider font-medium" style="color: var(--text-secondary);">Reflexão</h3>
+                    </div>
+                    
+                    <div id="userResponseDisplay" class="quote mb-6 text-base italic pl-6" style="color: var(--text-secondary);"></div>
+                    
+                    <div id="responseContent" class="text-base md:text-lg leading-relaxed"></div>
+                </div>
+                
+                <div id="conclusionBox" class="card conclusion-box p-7 text-center hidden fade-in mb-8">
+                    <p id="conclusionContent" class="text-lg md:text-xl font-medium"></p>
+                </div>
+                
+                <div id="resetArea" class="my-10 text-center hidden fade-in stagger-3">
+                    <button id="resetButton" class="btn-subtle">
+                        <i class="fas fa-sync-alt mr-2"></i> Nova Reflexão
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="mt-auto pt-10 text-center">
+            <div class="text-xs" style="color: var(--text-secondary);">
+                <p class="mb-2">© Hackeador de Mentes | Feito para desbloquear seu potencial</p>
+                <p>Seu desafio de hoje: comece um projeto em 5 minutos</p>
+            </div>
+        </footer>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
