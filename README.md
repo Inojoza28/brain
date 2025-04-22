@@ -27,9 +27,7 @@
 ## 🛠 Tecnologias Utilizadas
 
 **Frontend**  
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=flat&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+![Skills](https://skillicons.dev/icons?i=html,css,tailwind,js)
 
 **Design**  
 - Custom Properties CSS
@@ -46,7 +44,7 @@ git clone https://github.com/inojoza28/brain.git
 
 2. Acesse o diretório:
 ```bash
-cd hackeador-de-mentes
+cd brain
 ```
 
 3. Abra no navegador:
