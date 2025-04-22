@@ -5,7 +5,7 @@
 
 **Sua ferramenta anti-procrastinação para desbloquear projetos criativos**
 
-![Interface Preview](img/tela01.png) <!-- Adicione imagem de preview -->
+![Interface Preview](preview/tela01.png) <!-- Adicione imagem de preview -->
 
 ## 🌟 Funcionalidades Principais
 
@@ -34,6 +34,10 @@
 - Sistema de Cores Dinâmico
 - Micro-animações Fluidas
 - Tipografia Adaptável (Inter + Space Mono)
+
+## 🤝 Padrões de Contribuição
+
+![Workflow](https://skillicons.dev/icons?i=git,github,vscode)
 
 ## 🚀 Como Executar
 
