@@ -203,6 +203,18 @@ async function initApp() {
     }
 }
 
+// Adicione esta função para verificar se a entrada contém apenas pontuações
+function isInvalidInput(text) {
+    // Expressão regular para pontuação e espaços
+    const punctuationRegex = /^[\s\p{P}]*$/u;
+    
+    // Expressão regular para números e espaços
+    const numbersOnlyRegex = /^[\s\d]*$/;
+    
+    return punctuationRegex.test(text) || numbersOnlyRegex.test(text);
+}
+
+
 // Análise de sentimento e padrão linguístico sofisticada com tratamento de erros
 async function processUserInput() {
     try {
@@ -210,6 +222,48 @@ async function processUserInput() {
         const userResponse = inputField.value.trim();
         
         if (userResponse === '') return;
+        
+        // Verificação atualizada: pontuação ou apenas números
+        if (isInvalidInput(userResponse)) {
+            // Determinar o tipo de erro para mensagem personalizada
+            let errorMessage = '';
+            
+            if (/^[\s\p{P}]*$/u.test(userResponse)) {
+                errorMessage = 'Por favor, escreva uma resposta válida, não apenas pontuações.';
+            } else if (/^[\s\d]*$/.test(userResponse)) {
+                errorMessage = 'Por favor, escreva uma resposta válida, não apenas números.';
+            } else {
+                errorMessage = 'Por favor, escreva uma resposta válida.';
+            }
+            
+            // Mostrar feedback de erro
+            const feedbackElement = document.createElement('div');
+            feedbackElement.className = 'error-feedback text-red-500 text-sm mt-2 mb-2';
+            feedbackElement.textContent = errorMessage;
+            
+            // Inserir o feedback abaixo do campo de entrada
+            const inputContainer = inputField.parentElement;
+            
+            // Remover mensagem de erro anterior se existir
+            const oldFeedback = document.querySelector('.error-feedback');
+            if (oldFeedback) oldFeedback.remove();
+            
+            inputContainer.insertAdjacentElement('afterend', feedbackElement);
+            
+            // Efeito de shake no campo de entrada para feedback visual
+            inputField.classList.add('shake');
+            setTimeout(() => inputField.classList.remove('shake'), 500);
+            
+            // Fazer a mensagem desaparecer após 3 segundos
+            setTimeout(() => {
+                if (feedbackElement.parentNode) {
+                    feedbackElement.style.opacity = '0';
+                    setTimeout(() => feedbackElement.remove(), 300);
+                }
+            }, 3000);
+            
+            return; // Interrompe o processamento
+        }
         
         // Disable and clear input
         inputField.value = '';
