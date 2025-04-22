@@ -5,7 +5,7 @@
 
 **Sua ferramenta anti-procrastinação para desbloquear projetos criativos**
 
-![Interface Preview](img/tela01.png) <!-- Adicione imagem de preview -->
+![Interface Preview](preview/tela01.png) <!-- Adicione imagem de preview -->
 
 ## 🌟 Funcionalidades Principais
 
