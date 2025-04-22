@@ -35,6 +35,10 @@
 - Micro-animações Fluidas
 - Tipografia Adaptável (Inter + Space Mono)
 
+## 🤝 Padrões de Contribuição
+
+![Workflow](https://skillicons.dev/icons?i=git,github,vscode)
+
 ## 🚀 Como Executar
 
 1. Clone o repositório:
