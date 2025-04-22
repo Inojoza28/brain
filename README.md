@@ -68,4 +68,15 @@ open index.html  # Ou arraste o arquivo para o navegador
 4. **Reinicie o Ciclo**  
    Nova reflexão para diferentes desafios
 
+## ✉️ Contato
+
+Instagram: [https://instagram.com/dev_inojoza_] 
+
+Hub de Conexões: [https://inojoza28.github.io/conexoes]
+
+---
+
+**Feito com ❤️ por Gabriel Inojoza**  
+[![GitHub Follow](https://img.shields.io/github/followers/inojoza28?style=social)](https://github.com/inojoza28)
+
 
